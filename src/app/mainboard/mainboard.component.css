@@ -37,3 +37,6 @@
     margin:10px;
     text-align: center;
   }
+  .color{
+    border: 3px solid red;
+    }

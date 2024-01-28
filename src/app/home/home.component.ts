@@ -12,15 +12,11 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
-
   
   constructor( private dialog : MatDialog){
-
   }
 
   onDividerMouseDown(event:MouseEvent){
-
   }
 
   createTask(){

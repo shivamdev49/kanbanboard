@@ -12,3 +12,9 @@
 .bug{
     background-color: coral;
 }
+.icon {
+    margin-left: auto; 
+}
+.color{
+border: 3px solid red;
+}

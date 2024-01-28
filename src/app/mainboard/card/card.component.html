@@ -1,5 +1,5 @@
-<div class = "container">
-<mat-card >
+<div class = "container" *ngIf="cards == 1">
+<mat-card>
     <mat-card-content>
     <div class = "feature" *ngIf="cards.category == 1; else elseBlock">
     Feature
@@ -7,12 +7,17 @@
     <ng-template #elseBlock ><div class = "bug">Bug</div></ng-template>
 </mat-card-content>
     <mat-card-content>
-
         <div ><span class="title">Title:</span> {{ cards.title }}</div>
       </mat-card-content>
-  
-    <mat-card-content>Comments:{{cards.comments}}</mat-card-content>
-    <mat-card-content>Assignedto:{{cards.assignedTo}}</mat-card-content>
+    <mat-card-content class="icon">
+      <mat-icon (click)="OnSectionChangeTodo()">assignment_turned_in</mat-icon>      
+    </mat-card-content>
+    <mat-card-content>
+      <div ><span class="title">Comments:</span> {{ cards.comments}}</div>
+    </mat-card-content>
+    <mat-card-content>
+      <div ><span class="title">Assignedto:</span> {{ cards.assignedTo }}</div>
+      </mat-card-content>
   </mat-card>
 
 </div>

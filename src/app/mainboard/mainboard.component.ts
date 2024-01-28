@@ -10,25 +10,15 @@ import { Card } from 'src/model/card';
 export class MainboardComponent {
 
   tasks:Card[]=[];
-  task2:Card[]=[]
+  tasksprogress:Card[]=[];
+  taskscompleted:Card[]=[];
+  tasksreviewpending:Card[]=[];
   constructor(private service : KanbanService){
      this.tasks = this.service.getTask();
+     this.tasksprogress= this.service.getTaskProgress();
+     this.taskscompleted=this.service.getTaskCompleted();
+     this.tasksreviewpending= this.service.getTaskReviewPending();
   }
- 
-
-  onDragStarted(event: any): void {
-    console.log('Drag started:', event);
-  }
-
-  onDragEnded(event: any): void {
-    console.log('Drag ended:', event);
-  }
-//rohit made this
-/*
-  onDrop(event: CdkDragDrop<t[]>): void {
-    moveItemInArray(this.tasks, event.previousIndex, event.currentIndex);
-  }
-  */
 }
 
   

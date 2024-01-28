@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'kanbanboard';
 
-  onClick(){
-    
+  onClick(){ 
   }
 }

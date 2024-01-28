@@ -6,9 +6,8 @@ export interface Card{
     category:category;
     comments:String;
     assignedTo:String;
-
+    section:number;
 }
-
 export interface Cat{
     key:string;
     value: string;

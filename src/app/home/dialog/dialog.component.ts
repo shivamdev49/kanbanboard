@@ -11,17 +11,15 @@ import { category } from 'src/model/category';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent {
-
-  
   taskForm!: FormGroup;
   cats:Cat[]=[ 
-    {key: 'bug', value: 'BUG'},
+  {key: 'bug', value: 'BUG'},
   {key: 'feature', value: 'FEATURE'}];
-  
 
   constructor(private service : KanbanService, private dialog : MatDialogRef<DialogComponent>, private formBuilder: FormBuilder){
    
   }
+
   ngOnInit() {
     this.taskForm = this.formBuilder.group({
       title: [null, ],
@@ -35,18 +33,20 @@ export class DialogComponent {
     this.dialog.close();
   }
   onSubmit(){
-
    this.service.setId();
+   //this.service.SetSectionChange();
+   //section=1;
    const obj :Card = {
       id : this.service.getId(),
       title : this.taskForm.value.title, 
       category: this.taskForm.value.category,
       comments: this.taskForm.value.comment,
-      assignedTo : this.taskForm.value.assignee
+      assignedTo : this.taskForm.value.assignee,
+      section:this.service.getsection()
    }
-
+   //this.service.SetSectionChange(this.section)
    this.service.createTask(obj);
-   this.onClose();
-    
+   this.onClose(); 
   }
+
 }
