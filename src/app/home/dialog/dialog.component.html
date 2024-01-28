@@ -1,0 +1,30 @@
+<div class = 'container'>
+
+<form class = 'dialog-form' [formGroup]="taskForm" (submit)="onSubmit()">
+    <h2>Create Task</h2>
+    <mat-form-field class="form-full-width" appearance="outline">
+      <mat-label> Title
+      </mat-label>
+      <input matInput formControlName="title" >
+    </mat-form-field>
+    <mat-form-field class="form-full-width" appearance="outline">
+        <mat-label> Category </mat-label>
+        <mat-select formControlName="category">
+            <mat-option *ngFor="let cat of cats" [value]="cat.value">{{cat.key}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+      <mat-form-field class="form-full-width" appearance="outline">
+        <mat-label> Comment
+        </mat-label>
+        <input matInput formControlName="comment" required>
+      </mat-form-field>
+      <mat-form-field class="form-full-width" appearance="outline">
+        <mat-label> AssignedTo
+        </mat-label>
+        <input matInput formControlName="assignee" required>
+      </mat-form-field>
+   
+    <button mat-raised-button color="primary" type="submit">Create</button>
+  </form>
+ </div>

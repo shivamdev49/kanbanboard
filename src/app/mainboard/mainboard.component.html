@@ -1,0 +1,33 @@
+<!-- app.component.html -->
+<div class="container">
+    <div class = "row">
+        <div class="col-sm heading">
+           Todo
+          </div>
+          <div class="col-sm heading">
+           In Progress
+          </div>
+          <div class="col-sm heading">
+            Completed
+          </div>
+          <div class="col-sm heading">
+            Review Pending
+          </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+          <div class="row" *ngFor = "let card of tasks">
+              <app-card [cards] ="card"></app-card>
+          </div>
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+    </div>
+  </div>

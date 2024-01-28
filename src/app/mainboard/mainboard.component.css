@@ -1,0 +1,39 @@
+/* styles.css or your preferred style file */
+
+.sidenav-container {
+    height: 100vh;
+  }
+  
+  .sidenav {
+    width: 200px;
+    margin-top:50px;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height : 100%;
+    
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 16px;
+  }
+  
+  .resizable-divider {
+    cursor: ew-resize;
+    background-color: #ddd;
+    width: 8px;
+    height: 100%;
+  }
+  .heading{
+    background-color: burlywood;
+    font-weight: 200;
+    font-size: large;
+    padding: 15px;
+    height: 50px;
+    margin:10px;
+    text-align: center;
+  }

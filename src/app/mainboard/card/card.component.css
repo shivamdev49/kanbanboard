@@ -1,0 +1,14 @@
+.container{
+    padding :5px;
+    font-size: smaller;
+}
+.title{
+    font-weight: bold;
+}
+.feature{
+    background-color: cyan;
+   
+}
+.bug{
+    background-color: coral;
+}
